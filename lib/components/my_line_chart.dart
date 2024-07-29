@@ -9,8 +9,8 @@ class MyLineChart extends StatefulWidget {
 }
 
 class _LineChartState extends State<MyLineChart> {
-  TooltipBehavior tooltip = TooltipBehavior(enable: true);
-  late List<MyChartModel> data;
+  TooltipBehavior tooltip = TooltipBehavior(enable: true);      
+  late List<MyChartModel> data;                                    
 
   @override
   void initState() {

@@ -12,9 +12,9 @@ class FeedPage extends StatefulWidget {
 }
 
 class _FeedPageState extends State<FeedPage> {
-  int _selectedIndex = 0;
-  late List<Widget> _pages;
-  void navigateBottomBar(int index) {
+  int _selectedIndex = 0;//navbar
+  late List<Widget> _pages;//navbar
+  void navigateBottomBar(int index) {//navbar
     if (mounted) {
       setState(() {
         _selectedIndex = index;
@@ -25,17 +25,17 @@ class _FeedPageState extends State<FeedPage> {
   void initState() {
     super.initState();
 
-    _pages = [ShopPage(), CartPage(), ProfilePage()];
+    _pages = [ShopPage(), CartPage(), ProfilePage()];//navbar
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: IndexedStack(
+        body: IndexedStack(//navbar
           index: _selectedIndex,
           children: _pages,
         ),
-        bottomNavigationBar:
+        bottomNavigationBar://navbar
             MyBottomNavBar(onTabChange: (index) => navigateBottomBar(index)));
   }
 }
